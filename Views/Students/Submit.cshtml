@@ -1,0 +1,33 @@
+﻿@model Proiect_PASS_New_1.Models.Student
+
+@{
+  ViewBag.Title = "Horoscop";
+}
+
+
+
+<h2>Horoscop</h2>
+@{
+
+  var ViewDataTest1 = ViewData["ViewCustomer1"];
+
+
+}
+
+@using (Html.BeginForm())
+{
+  @Html.AntiForgeryToken()
+
+
+
+<div>
+
+  <h2>@ViewDataTest1</h2>
+
+</div>
+}
+
+<div>
+  @Html.ActionLink("Back to List", "Index")
+</div>
+

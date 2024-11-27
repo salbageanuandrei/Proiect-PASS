@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Students>
+  <Student>
+    <Id>1</Id>
+    <NrMatricol>MH4534</NrMatricol>
+    <Nume>Mihai</Nume>
+    <Prenume>Dan</Prenume>
+    <Medie>7.8</Medie>
+  </Student>
+  <Student>
+    <Id>2</Id>
+    <NrMatricol>JD5634</NrMatricol>
+    <Nume>Gorgu</Nume>
+    <Prenume>Mihai</Prenume>
+    <Medie>9.6</Medie>
+  </Student>
+</Students>

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Proiect_PASS_New_1.Models.Student>
+
+  @{
+    ViewBag.Title = "PreziceZiuaReturn";
+  }
+
+
+
+  <h2>PreziceZiua</h2>
+  @{
+
+    var ViewDataTest3 = ViewData["ViewCustomer3"];
+
+
+  }
+
+  @using (Html.BeginForm("PreziceZiuaReturn", "Students", FormMethod.Post))
+  {
+    @Html.AntiForgeryToken()
+
+    <h2>@ViewDataTest3</h2>
+
+    <p>
+      @Html.Label("NrMatricol")
+      @Html.TextBox("NrMatricol", ViewBag.NrMatricol as string, new { @class = "form-control", placeholder = "Enter Nr Matricol" })
+      @Html.Hidden("NrMatricol", (object)ViewBag.NrMatricol)
+      <input type="submit" value="Submit" class="btn btn-primary" />
+    </p>
+
+    <table class="table">
+      <tr>
+        <th>
+          @Html.DisplayNameFor(model => model.NrMatricol)
+        </th>
+        <th>
+          @Html.DisplayNameFor(model => model.Nume)
+        </th>
+        <th>
+          @Html.DisplayNameFor(model => model.Prenume)
+        </th>
+        <th>
+          @Html.DisplayNameFor(model => model.Medie)
+        </th>
+        <th></th>
+      </tr>
+
+      @foreach (var item in Model)
+      {
+        <tr>
+          <td>
+            @Html.DisplayFor(modelItem => item.NrMatricol)
+          </td>
+          <td>
+            @Html.DisplayFor(modelItem => item.Nume)
+          </td>
+          <td>
+            @Html.DisplayFor(modelItem => item.Prenume)
+          </td>
+          <td>
+            @Html.DisplayFor(modelItem => item.Medie)
+          </td>
+        </tr>
+        <!-- Closing the row properly -->}
+
+    </table>
+
+  }
+
+  <div>
+
+    @Html.ActionLink("Back to List", "Index")
+  </div>
+

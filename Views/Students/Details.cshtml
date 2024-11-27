@@ -1,0 +1,50 @@
+﻿@model Proiect_PASS_New_1.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NrMatricol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NrMatricol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prenume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prenume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medie)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
